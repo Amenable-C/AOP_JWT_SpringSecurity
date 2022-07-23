@@ -16,7 +16,15 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	implementation "jaxb.xml.bind:jaxb-api"
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+	//implementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '3.0.2'
+	implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
 }
 
 tasks.named('test') {
