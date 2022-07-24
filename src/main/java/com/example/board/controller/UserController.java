@@ -1,5 +1,6 @@
 package com.example.board.controller;
 
+import com.example.board.aspect.TokenRequired;
 import com.example.board.dto.UserDTO;
 import com.example.board.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,7 @@ public class UserController {
         return userService.getAllUsers();
     }
 
+    @TokenRequired
     @GetMapping("/{userId}")
     public UserDTO getUserByUserId(@PathVariable String userId){
         return userService.getUserByUserId(userId);
